@@ -5,6 +5,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     const int scorePoints = 10;
+    const float velocityIncrease = 5f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -12,6 +13,7 @@ public class Target : MonoBehaviour
         {
             GameManager.instance.ModifyScore(scorePoints);
             GameManager.instance.SpawnNewTarget();
+            player.GetComponent<Rigidbody2D>().velocity += player.GetComponent<Rigidbody2D>().velocity.normalized * velocityIncrease;
             Destroy(gameObject);
         }
     }
