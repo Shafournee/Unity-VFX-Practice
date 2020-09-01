@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
 
 public class PlayerController : MonoBehaviour
 {
@@ -40,10 +41,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        LimitMaxVelocity();
+        StopVelocity();
     }
 
-    private void LimitMaxVelocity()
+    private void StopVelocity()
     {
         if(rigidBody.velocity.magnitude < minVelocity)
         {
@@ -96,5 +97,11 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForFixedUpdate();
         rigidBody.AddForce(forceDir * force);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        float magnitude = rigidBody.velocity.magnitude / 10f;
+        CameraShaker.Instance.ShakeOnce(magnitude, 10f, 0f, .5f);
     }
 }
