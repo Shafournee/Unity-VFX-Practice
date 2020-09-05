@@ -55,17 +55,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Target.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeByDistance.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeOnKeyPress.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakeInstance.cs" />
+    <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeOnTrigger.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakePresets.cs" />
     <Compile Include="Assets\EZ Camera Shake\Demo\ShakeDemo.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\Utilities\CameraUtilities.cs" />
     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShaker.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\EmitLeaves.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
